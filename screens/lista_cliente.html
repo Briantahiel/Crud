@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doguito Petshop | Clientes</title>
+    <link rel="icon" href="../assets/img/doguitoadm.svg" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/base/base.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/header.css" />
+    <link rel="stylesheet" href="../assets/css/lista_cliente.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/table.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/button.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/modal.css" />
+  </head>
+  <body>
+    <header class="header container">
+      <img
+        src="../assets/img/doguitoadm.svg"
+        alt="Logotipo Doguito"
+        class="header_logo"
+      />
+      <nav>
+        <ul class="header_list_nav">
+          <li class="header_link"><a href="#">Dashboard</a></li>
+          <li class="header_link"><a href="#">Productos</a></li>
+          <li class="header_link"><a href="#">Clientes</a></li>
+          <li class="header_link"><a href="#">Pets</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="clientes-container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="table_column_p">Nombre</th>
+            <th class="table_column_g">Email</th>
+            <th class="table_column_m table_align_right">
+              <a
+                href="./registrar_cliente.html"
+                class="simple_button simple_button_add"
+                >Nuevo Cliente</a
+              >
+            </th>
+          </tr>
+        </thead>
+        <tbody data-table>
+    
+        </tbody>
+      </table>
+      <div class="modal_container modal_close">
+        <article class="modal">
+          <h2 class="modal_title">Eliminar</h2>
+          <button class="modal_close">X</button>
+          <p class="modal_text">¿Deseas continuar?</p>
+          <div class="modal_button_container">
+            <button class="modal_button modal_button_confirm">
+              Eliminar
+            </button>
+            <button class="modal_button">No eliminar</button>
+          </div>
+        </article>
+      </div>
+    </main>
+    <script src="../service//clientService.js"></script>
+  </body>
+</html>
