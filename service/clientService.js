@@ -29,21 +29,24 @@ const newLine = (name, email) => {
 const table = document.querySelector("[data-table]");
 
 const clientList = () => {
-    const promise = new Promise((resolve, reject) => {
-        const http = new XMLHttpRequest();
-        http.open("GET","http://localhost:3000/profile");
-        http.send();
-        http.onload = () => {
-            const response = JSON.parse(http.response);
-            if(http.status >= 400){
-                reject(response)
-            }
-            else{
-                resolve(response)
-            }
-        };
+    return fetch("http://localhost:3000/profile").then((res) => {
+        return res.json()
     });
-    return promise
+    // const promise = new Promise((resolve, reject) => {
+    //     const http = new XMLHttpRequest();
+    //     http.open("GET","http://localhost:3000/profile");
+    //     http.send();
+    //     http.onload = () => {
+    //         const response = JSON.parse(http.response);
+    //         if(http.status >= 400){
+    //             reject(response)
+    //         }
+    //         else{
+    //             resolve(response)
+    //         }
+    //     };
+    // });
+    // return promise
 };
 clientList().then((data) => {
     data.forEach(profile => {
