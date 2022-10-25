@@ -28,31 +28,15 @@ const newLine = (name, email) => {
 };
 const table = document.querySelector("[data-table]");
 
-const clientList = () => {
-    return fetch("http://localhost:3000/profile").then((res) => {
-        return res.json()
-    });
-    // const promise = new Promise((resolve, reject) => {
-    //     const http = new XMLHttpRequest();
-    //     http.open("GET","http://localhost:3000/profile");
-    //     http.send();
-    //     http.onload = () => {
-    //         const response = JSON.parse(http.response);
-    //         if(http.status >= 400){
-    //             reject(response)
-    //         }
-    //         else{
-    //             resolve(response)
-    //         }
-    //     };
-    // });
-    // return promise
-};
-clientList().then((data) => {
-    data.forEach(profile => {
-        const thisLine = newLine(profile.name, profile.email)
-        table.appendChild(thisLine);
-    });
+const clientList = () => 
+    fetch("http://localhost:3000/profile").then((res) => res.json());
+
+clientList()
+    .then((data) => {
+        data.forEach(profile => {
+            const thisLine = newLine(profile.name, profile.email)
+            table.appendChild(thisLine);
+        });
 }).catch((err) => alert("Something went wrong!"))
 
 
