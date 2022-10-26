@@ -25,24 +25,24 @@
       <img
         src="../assets/img/doguitoadm.svg"
         alt="Logo Doguito"
-        class="header__logo"
+        class="header_logo"
       />
       <nav>
-        <ul class="header__list-nav">
-          <li class="header__link"><a href="#">Dashboard</a></li>
-          <li class="header__link"><a href="#">Productos</a></li>
-          <li class="header__link">
+        <ul class="header_list_nav">
+          <li class="header_link"><a href="#">Dashboard</a></li>
+          <li class="header_link"><a href="#">Productos</a></li>
+          <li class="header_link">
             <a href="lista_cliente.html">Clientes </a>
           </li>
-          <li class="header__link"><a href="#">Pets</a></li>
+          <li class="header_link"><a href="#">Pets</a></li>
         </ul>
       </nav>
     </header>
-    <main class="container flex flex--center flex--column">
-      <section class="card cadastro">
-        <h1 class="card__title">Nuevo Cliente</h1>
-        <form class="flex flex--column" data-form>
-          <div class="input-container">
+    <main class="container flex flex_center flex_column">
+      <section class="card register">
+        <h1 class="card_title">Nuevo Cliente</h1>
+        <form class="flex flex_column" data-form>
+          <div class="input_container">
             <input
               name="nombre"
               id="nombre"
@@ -50,12 +50,12 @@
               type="text"
               placeholder="Nombre"
               required
-              data-nombre
+              data-name
             />
-            <label class="input-label" for="nombre">Nombre</label>
-            <span class="input-menssage-error">Este campo es requerido</span>
+            <label class="input_label" for="nombre">Nombre</label>
+            <span class="input_menssage_error">Este campo es requerido</span>
           </div>
-          <div class="input-container">
+          <div class="input_container">
             <input
               name="email"
               id="email"
@@ -65,12 +65,14 @@
               required
               data-email
             />
-            <label class="input-label" for="email">Email</label>
-            <span class="input-menssage-error">Este campo es requerido</span>
+            <label class="input_label" for="email">Email</label>
+            <span class="input_menssage_error">Este campo es requerido</span>
           </div>
           <button type="submit" class="button">Registrar</button>
         </form>
       </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.2.0/uuid.min.js" integrity="sha512-X0CJvcClD8EXFn5Oq8BD5lIsznKDfxb0Sf9Wr8MCCTyAEWaAAxr0Jvm3qyofsmN7eSHMZ0PPQGjVKroLAfexrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="../controller/register_controller.js"></script>
   </body>
 </html>

@@ -44,8 +44,8 @@
   transition: all 0.25s;
 }
 
-.input:not(:placeholder-shown) + .input-label,
-.input:focus + .input-label {
+.input:not(:placeholder-shown) + .input_label,
+.input:focus + .input_label {
   font-size: 0.875rem;
   top: 0.25rem;
   transition: all 0.25s;
